@@ -27,7 +27,9 @@
         <h4>Contain into element</h4>
         <p>When defining a containment, the draggable object will be restricted to move within the element's boundaries.</p>
         <div id="bindExample" class="eventarea bind-box">
-          <div id="boundEle" class="drag-obj marker"></div>
+          <div id="boundEle" class="drag-obj marker">
+            <span class="handle">H</span>
+          </div>
         </div>
       </div>
 
@@ -50,7 +52,7 @@
       (function() {
         // Creating and configuring Dragble examples
         window.no_config = new Dragble('#noConfigHandle');
-        window.bind_demo = new Dragble('#boundEle', {containment: '#bindExample'} );
+        window.bind_demo = new Dragble('#boundEle', {containment: '#bindExample', handle: '.handle'} );
         window.horz_demo = new Dragble('#horzEle', {axis:'y', containment: "#horzDemo"} );
         
       })();
