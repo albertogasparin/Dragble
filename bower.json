@@ -1,0 +1,26 @@
+{
+  "name": "dragble",
+  "version": "1.0.0",
+  "homepage": "https://github.com/albertogasparin/Dragble",
+  "authors": [
+    "Alberto Gasparin <albertogasparin@gmail.com>"
+  ],
+  "description": "Tiny JS lib to drag elements",
+  "main": "lib/dragble.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "draggable",
+    "dragble",
+    "drag"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

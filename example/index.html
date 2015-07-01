@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+    <title>Dragble example</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="content">
+      
+      <h1>Dragble.js</h1>
+
+      <h2>Examples</h2>
+
+      <div class="demo">
+        <h4>No configuration</h4>
+        <p>If providing no configuration, the elements will be freely draggable.</p>
+        <div class="eventarea">
+          <div id="noConfigHandle" class="drag-obj marker" style="-webkit-transform:translate3d(100px, -50px, 0)"></div>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h4>Contain into element</h4>
+        <p>When defining a containment, the draggable object will be restricted to move within the element's boundaries.</p>
+        <div id="bindExample" class="eventarea bind-box">
+          <div id="boundEle" class="drag-obj marker"></div>
+        </div>
+      </div>
+
+      <div id="horzDemo" class="demo">
+        <h4>Restriced to horizontal movement</h4>
+        <p>It is possible to restrict movement to horizontal or vertical only.</p>
+        <div class="eventarea">
+          <div id="horzEle" class="drag-obj marker"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="https://github.com/albertogasparin/dragble">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+
+    <script src="../lib/dragble.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      (function() {
+        // Creating and configuring Dragble examples
+        window.no_config = new Dragble('#noConfigHandle');
+        window.bind_demo = new Dragble('#boundEle', {containment: '#bindExample'} );
+        window.horz_demo = new Dragble('#horzEle', {axis:'y', containment: "#horzDemo"} );
+        
+      })();
+    </script>
+  </body>
+</html>
